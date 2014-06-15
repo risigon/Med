@@ -29,7 +29,7 @@
 <c:import url="cabecalho.jsp"></c:import>
 <a id="right" class="submit-button" href="menuAdmin.jsp">Voltar</a>
 
-<form class="form-container" action="cadConsulta" method="post">
+<form class="form-container" action="cadConsulta2" method="post">
 <div class="form-title"><h4>Cadastrar Consultas</h4></div>
 <div class="form-title">Nome Paciente</div>
 <input class="form-field" type="text" name="nomepac" size=50/><br />
