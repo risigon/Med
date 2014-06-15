@@ -3,6 +3,7 @@ package servlet;
 import java.io.IOException;
 import java.util.List;
 
+import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.servlet.ServletException;
@@ -52,37 +53,18 @@ public class cadConsulta2 extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String cpf = request.getParameter("cpf");
-		String crm = request.getParameter("crm");
-		String dtcons = request.getParameter("dataconsulta");
-		String horacons = request.getParameter("horaconsulta");
-		String obs = request.getParameter("obs");
-		String retorno = request.getParameter("retorno");
 		
-				
-		inserirConsulta(cpf, crm, dtcons, horacons, obs, retorno);
+		EntityManager em = JPAUtilis.criarManager();
 		
-		//validarcrm(idmed);
+		consulta con = new consulta();
+		
+		em.getTransaction().begin();
+		em.persist(con);	
+		em.getTransaction().commit();
+		em.close();
 				
 		request.getRequestDispatcher("cadConsulta").forward(request, response);
 	
-		
-	}
-
-	private static void inserirConsulta(String cpf, String crm, String dtcons, String horacons, String obs, String retorno){
-		
-		//criar conexao
-		 EntityManager conexao=JPAUtilis.criarManager();
-		
-		consulta con = new consulta();
-			
-		 
-		 conexao.getTransaction().begin();
-		 conexao.persist(con);
-		 conexao.getTransaction().commit();
-		  
-		 conexao.close();	 
-		 
 	}
 	
 }
