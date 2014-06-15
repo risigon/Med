@@ -11,10 +11,12 @@ public class consulta {
 	@GeneratedValue
 	private int id;
 	
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="idmed", referencedColumnName="idmed")
 	private medico med;
 	
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="idpac", referencedColumnName="idpac")
 	private paciente pac;
 	
 	private String dtcons;
