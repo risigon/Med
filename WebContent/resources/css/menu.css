@@ -1,0 +1,70 @@
+
+.menu{
+margin: 0;
+text-align: center;
+padding: 0;
+width: 900px;
+height: 35px;
+position: relative;
+top: 5px;
+}
+.menu ul{
+list-style: none;
+}
+
+.menu li{
+width: 180px;
+padding:0px;
+margin: 0;
+position: relative;
+display: inline;
+float: left;
+}
+
+.menu li ul{
+display: none;
+padding: 0;
+margin: 0;
+position: relative;
+top: 0px;
+left: 0;
+}
+
+.menu a{
+display: block;
+background-color: #7bb59e;
+background: -webkit-gradient(linear, left top, left bottom, from(#f2e3d2), to(#7bb59e));
+   background: -webkit-linear-gradient(top, #f2e3d2, #7bb59e);
+   background: -moz-linear-gradient(top, #f2e3d2, #7bb59e);
+   background: -ms-linear-gradient(top, #f2e3d2, #7bb59e);
+   background: -o-linear-gradient(top, #f2e3d2, #7bb59e);
+   background-image: -ms-linear-gradient(top, #f2e3d2 0%, #7bb59e 100%);
+   -webkit-border-radius: 1px;
+   -moz-border-radius: 1px;
+   border: 8px;
+   -webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   font-family: 'Helvetica Neue',Helvetica,sans-serif;
+   text-decoration: none;
+   vertical-align: middle;	
+	
+padding: 7px;
+font-size: 12px;
+font-weight: 400;
+}
+
+.menu li:hover ul, li.over ul{
+display: block;
+}
+
+.menu li a:hover{
+background: black; 
+color: white;
+}
+
+.menu ul li a:hover{
+background: black; 
+color: white;
+}
+
