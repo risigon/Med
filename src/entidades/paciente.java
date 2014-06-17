@@ -19,7 +19,7 @@ public class paciente extends pessoa {
 	private String senha;
 	
 	@OneToMany(mappedBy="pac", cascade=CascadeType.PERSIST)
-	private List<consulta> cons = new ArrayList<consulta>();
+	private List<consulta> cons = new ArrayList<>();
 	
 	public int getIdpac() {
 		return idpac;

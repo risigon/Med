@@ -12,7 +12,6 @@ public class consulta {
 	private int id;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="idmed", referencedColumnName="idmed")
 	private medico med;
 	
 	@ManyToOne(fetch=FetchType.LAZY)

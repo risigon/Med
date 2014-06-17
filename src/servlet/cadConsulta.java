@@ -93,8 +93,8 @@ HttpSession sessao = request.getSession();
 		con.setObs(obs);
 		con.setRetorno(retorno);
 		
-		med.setCons(con);
-		pac.setCons(con);
+		//med.setCons(con);
+		//pac.setCons(con);
 		 
 		 conexao.getTransaction().begin();
 		 conexao.persist(con);

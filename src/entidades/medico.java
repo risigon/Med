@@ -20,7 +20,7 @@ public class medico extends pessoa {
 	private String senha;
 	
 	@OneToMany(mappedBy="med", cascade=CascadeType.PERSIST)
-	private List<consulta> cons = new ArrayList<consulta>();
+	private List<consulta> cons = new ArrayList<>();
 	
 	public int getIdmed() {
 		return idmed;
