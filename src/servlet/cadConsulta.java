@@ -64,7 +64,7 @@ HttpSession sessao = request.getSession();
 		inserirConsulta(crm, cpf, dtcons, horacons, obs, retorno);
 		
 				
-		request.getRequestDispatcher("cadConsulta").forward(request, response);
+		request.getRequestDispatcher("cadConsulta.jsp").forward(request, response);
 	
 		
 	}
@@ -93,14 +93,14 @@ HttpSession sessao = request.getSession();
 		con.setObs(obs);
 		con.setRetorno(retorno);
 		
-		//med.setCons(con);
-		//pac.setCons(con);
+		med.setCons(con);
+		pac.setCons(con);
 		 
-		 conexao.getTransaction().begin();
-		 conexao.persist(con);
-		 conexao.getTransaction().commit();
+		conexao.getTransaction().begin();
+		conexao.persist(con);
+		conexao.getTransaction().commit();
 		  
-		 conexao.close();
+		conexao.close();
 		 	 
 		 
 	}
