@@ -52,6 +52,7 @@
 			<ul>
 				<li> <a href="listarPaciente">Listar Pacientes</a></li>
 				<li> <a href="listarMedicos">Listar Médicos</a></li>
+				<li> <a href="listarConsulta">Listar Consultas</a></li>
 				<li> <a href="">Listar Consultas por Periodo</a></li>
 				<li> <a href="">Listar Consultas por Medico</a></li>
 			</ul>

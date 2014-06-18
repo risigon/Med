@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import util.JPAUtilis;
+import entidades.consulta;
 import entidades.medico;
 import entidades.paciente;
 
@@ -63,6 +64,11 @@ public class listar extends HttpServlet {
 			listarMed(request, response);
 			break;
 		}
+		case("listarcon"):{
+			listarCon(request, response);
+			break;
+		}
+		
 		}
 		
 		
@@ -137,5 +143,22 @@ protected void listarMed(HttpServletRequest request, HttpServletResponse respons
 	request.getRequestDispatcher("listarMedico.jsp").forward(request, response);
 	
 }
+
+protected void listarCon(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+	
+	EntityManager conexao=JPAUtilis.criarManager();
+	
+	Query q1 = conexao.createQuery("select count(*) from consulta");
+	List<Integer> qconta = q1.getResultList();
+	request.setAttribute("contador", qconta);
+	
+	Query query = conexao.createQuery("select c From consulta c order by c.id");
+	List<consulta> consultas = query.getResultList();
+	
+	request.setAttribute("conlista", consultas);
+	request.getRequestDispatcher("listarConsulta.jsp").forward(request, response);
+	
+}
+
 
 }
